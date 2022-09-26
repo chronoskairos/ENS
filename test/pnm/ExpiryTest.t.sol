@@ -9,7 +9,7 @@ contract ExpiryTest is NameWrapperTest {
     bytes32 subSubId;
 
     function setUp() public {
-        // Step 1. Deploy all the smart contracts
+        // Step 1. Deploy three smart contracts (64 functions)
         deploy();
 
         // Step 2. Register pnm.eth
