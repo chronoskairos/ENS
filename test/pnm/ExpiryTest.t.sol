@@ -22,11 +22,12 @@ contract ExpiryTest is NameWrapperTest {
         subSubId = registerSubNode(subId, "subsub");
     }
 
-    function check() public override {
+    function invariantExpiryOrder() public {
+        // INVARIANT:
+        // A parent domain always expires later than a child domain
         require(
-            expiry(pnmId) >= expiry(subId) &&
             expiry(subId) >= expiry(subSubId),
-            "[!!!] Invariant violation: Sub domain expires later than its parent."
+            "Sub domain expires later than its parent."
         );
     }
 }
