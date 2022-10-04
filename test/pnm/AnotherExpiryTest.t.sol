@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "./NameWrapperTest.t.sol";
 
-contract ExpiryTest is NameWrapperTest {
+contract AnotherExpiryTest is NameWrapperTest {
     bytes32 pnmId;
     bytes32 subId;
     bytes32 subSubId;
